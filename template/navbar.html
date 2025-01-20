@@ -68,11 +68,10 @@
                                         <div class="container">
                                             <div class="mega-menu-content clearfix">
                                                 <div class="tab">
-                                                    <!-- <button class="tablinks active" onclick="openCategory(event, 'cat01')">Science</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat02')">Technology</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat03')">Social Media</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat04')">Car News</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat05')">Worldwide</button> -->
+                                                    {% categories as cats%}
+                                                    {% for cat in cats %}
+                                                    <a href="{{ cat.get_absolute_url }}" class="tablinks" onclick="openCategory(event, 'cat05')">{{ cat.name }}</a>
+                                                    {% endfor %}
                                                 </div>
 
                                                 <div class="tab-details clearfix">
