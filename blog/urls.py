@@ -10,5 +10,5 @@ urlpatterns = [
     path('cantact/', views.Contact, name='contact'),
     path("single/", views.Single, name="single"),
     path('author/', views.Author, name='author'),
-    path('categorys/<slug:slug>/', CategorysView, name='categorys'),
+    path('categorys/<slug:slug>/', CategorysView, name='categories'),
 ]
