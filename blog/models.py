@@ -12,7 +12,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("categorys", args={self.slug})
+        return reverse("categorys", args=[self.slug])
 
 
 class PublishedManager(models.Manager):
@@ -23,8 +23,8 @@ class PublishedManager(models.Manager):
 
 class Post(models.Model):
     STATUS_CHOICES = (
-        ('draft', 'Draft'),
-        ('published', 'Published'),
+        ('Draft', 'draft'),
+        ('Published', 'published'),
     )
     title = models.CharField(max_length=255)
     category = models.ForeignKey(to=Category, on_delete=models.CASCADE)
