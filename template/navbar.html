@@ -69,7 +69,7 @@
                                                 <div class="tab">
                                                     {% categories as cats%}
                                                     {% for cat in cats %}
-                                                    <a href="{{ cat.get_absolute_url }}" class="tablinks" onclick="openCategory(event, 'cat05')">{{ cat.name }}</a>
+                                                    <a href="{{ cats.get_absolute_url }}" class="tablinks" onclick="openCategory(event, 'cat05')">{{ cat.name }}</a>
                                                     {% endfor %}
                                                 </div>
 
