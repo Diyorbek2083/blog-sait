@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views 
-from blog.views import CategorysView
 
 urlpatterns = [
     path('', views.HomePage, name='home'),
@@ -10,5 +9,5 @@ urlpatterns = [
     path('cantact/', views.Contact, name='contact'),
     path("single/", views.Single, name="single"),
     path('author/', views.Author, name='author'),
-    path('categorys/<slug:slug>/', CategorysView, name='categories'),
+    path('categorys/<slug:slug>/', views.CategorysView, name='categories'),
 ]
